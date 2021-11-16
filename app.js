@@ -3,9 +3,9 @@ const express = require("express");
 var cookieParser = require("cookie-parser");
 const passport = require("./utils/pass");
 var session = require("express-session");
-const { json } = require("express");
 const app = express();
 const port = 3000;
+
 const loggedIn = (req, res, next) => {
   //middleware function (req,res,next)
   if (req.user) {
